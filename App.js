@@ -13,11 +13,12 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerShown: false,
+            headerShown: true,
           }}
         >
           <Stack.Screen
             options={{
+              headerShown: false,
               headerTitle: "Welcome to Luxembourg City",
               headerTitleStyle: {
                 color: "black",

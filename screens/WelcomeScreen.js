@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Swiper from "react-native-swiper";
+import Homescreen from "./HomeScreen";
 
-export default function Welcomescreen() {
+export default function Welcomescreen(props) {
   return (
     <View style={{ flex: 1 }}>
       <Swiper loop autoplay dotColor="grey" activeDotColor="#fff">
@@ -47,7 +48,12 @@ export default function Welcomescreen() {
         <View
           style={{ flexDirection: "row", paddingLeft: 40, paddingRight: 40 }}
         >
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              props.navigation.navigate("Home");
+            }}
+          >
             <Text style={{ fontSize: 18, fontWeight: "bold", color: "#fff" }}>
               {" "}
               Get Started
